@@ -1,0 +1,30 @@
+# If statement
+age = int(input('enter your age'))
+
+if age >= 18:
+    print('You are an adult')
+else:
+    print('You are not an adult')
+  
+# elif statement
+grades = int(input('Enter your grades'))
+
+if grades >= 90:
+    print('Grade A')
+
+elif grades >= 70:
+    print('Grade B')
+
+elif grades >= 60:
+    print('Grade C')
+
+elif grades < 60:
+    print('Grade D')
+    
+# Append, Insert
+favorite_foods = ['Hot Cheetos', 'Avocado', 'Beans']
+
+favorite_foods.append('Blueberries')
+favorite_foods.insert(3, 'Mangoes')
+
+print(favorite_foods)
