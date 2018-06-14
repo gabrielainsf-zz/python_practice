@@ -1,0 +1,33 @@
+## /*Assume you want to build two functions for discounting products on a website.
+## Function number 1 is for student discount which discounts the current price to 10%.
+## Function number 2 is for additional discount for regular buyers which discounts an additional 5% on the current student discounted price.
+## Depending on the situation, we want to be able to apply both the discounts on the products.
+
+## Design the above two mentioned functions and apply them both simultaneously on the price.
+
+def student_discount(price):
+    return price - (price * (.1))
+
+def additional_discount(func):
+    return price - (price * (.05))
+
+price = 100
+
+result = additional_discount(student_discount(price))
+
+print(result)
+
+# Calculate the value of mathematical expression x*(x+5)^2 where x= 5 using lambda expression.
+result = (lambda x: x*(x+5)**2)(5)
+print(result)
+
+# Consider a list in Python which includes prices of all the items in a store. Build a function to discount the price of all the products by 10%.
+# Use map to apply the function to all the elements of the list so that all the product prices are discounted.
+
+def discount(price):
+    price = price - (price * .1)
+    return price
+
+prices = [25, 25, 80, 60, 40]
+new_prices = list(map(discount, prices))
+print(new_prices)
