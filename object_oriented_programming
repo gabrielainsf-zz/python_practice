@@ -1,0 +1,31 @@
+# Inheritance
+
+class Computer:
+    def __init__(self, specs):
+        self.specs = specs
+
+    def getspecs(self):
+        print('Accepting specs')
+        self.specs = input('Enter specs')
+
+    def displayspecs(self):
+        print('The display specs of your computer are ' + self.specs)
+
+
+class Desktop(Computer):
+    def __init__(self, weight):
+        self.weight = weight
+
+    def getweight(self):
+        self.weight = input('Enter the weight of your desktop')
+
+class Laptop(Computer):
+    def __init__(self, storage):
+        self.storage = storage
+
+    def getstorage(self):
+        self.storage = input('Enter the storage of your laptop')
+
+MacBook = Laptop(16)
+MacBook.getspecs()
+MacBook.displayspecs()
